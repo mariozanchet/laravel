@@ -83,53 +83,7 @@ class TaskListController extends Controller
         $estados = ['nova','adiada','trabalhando','concluida','cancelada'];
       return view('tasklist-veja', compact( 'dados','estados'));
 
-
-        /*
-        +"id": 64
-    +"cliente": 2
-    +"titulo": "titulo 444"
-    +"tarefa": "tarefa 444"
-    +"ativo": 0
-    +"estado": "cancelada"
-    +"created_at": "2018-12-11 14:38:20"
-    +"updated_at": "2018-12-11 14:45:44"
-    +"vista": null
-    +"cancelada": null
-    +"adiada": null
-    +"concluida": null
-*/
-//DB::select("update tasklists set tarefa = '$tarefa' where (cliente = '$userid' and id = '$novaid')");
-
-//        $busca = DB::select("SELECT * FROM tasklists where (id = '$tarefaid' and cliente = '$userid')");
-
-
-/*        $busca->titulo = 'titulo 444';
-        $busca->tarefa = 'tarefa 444';
-        $busca->ativo = 0;
-        $busca->estado = 'cancelada';
-        $busca->save();
-
-        $busco = $this->tarefas->find(3);
-$busco->update(['titulo' => 'teste333','tarefa' => 'tarefa 3333']);
-*/
-        return "Veja TL";
     }
-
-    public function feita($id = 0)
-    {
-        return "feita TL $id";
-    }
-
-    public function cancela($id = 0)
-    {
-        return "cancela TL $id";
-    }
-
-    public function adia($id = 0)
-    {
-        return "adia TL $id";
-    }
-
     public function apaga($tarefa =0)
     {
         $userid = Auth::user()->id;
