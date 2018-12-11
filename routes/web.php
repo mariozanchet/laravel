@@ -13,9 +13,5 @@ Route::group(['prefix' => 'tasklist'], function () {
     Route::any('/nova', 'TaskListController@nova');
     Route::any('/atualiza/{novaid?}', 'TaskListController@atualiza');
     Route::any('/veja/{tarefa?}', 'TaskListController@veja');
-    Route::any('/feita', 'TaskListController@feita');
-    Route::any('/cancela', 'TaskListController@cancela');
-    Route::any('/adia', 'TaskListController@adia');
     Route::any('/apaga/{tarefa?}', 'TaskListController@apaga');
-
 });
